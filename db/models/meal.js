@@ -22,8 +22,9 @@ module.exports = (sequelize) => {
         }
       },
     
-    author: Sequelize.STRING,
-    body: Sequelize.TEXT
+    time: Sequelize.STRING,
+    ingredients: Sequelize.TEXT,
+    instructions: Sequelize.TEXT
   }, { sequelize });
 
   return Meal;
