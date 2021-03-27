@@ -5,10 +5,14 @@ module.exports = (sequelize) => {
   Meal.init({
   title: {
       type: Sequelize.STRING,
+      allowNull: false,
       validate: {
         notEmpty: {
           msg: '"Title" is required'
-        }
+        },
+        notNull: {
+          msg: '"Title" is required',
+        },
       }
     },
   
