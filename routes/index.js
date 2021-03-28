@@ -37,12 +37,15 @@ router.post('/api/meals', asyncHandler(async (req, res, next) => {
 }));
 
 router.put('/api/meals/:id', asyncHandler(async (req, res, next) => {
-  const meal = await Meal.create(req.body);
+  const meal = await Meal.findByPk(req.params.id);
+  await meal.update(req.body);
   res.json(meal)
 }));
 
 router.delete('/api/meals/:id', asyncHandler(async (req, res, next) => {
-  const meal = await Meal.create(req.body);
+  const meal = await Meal.findByPk(req.params.id);
+  await meal.destroy();
+  res.json(meal)
   res.json(meal)
 }));
 
