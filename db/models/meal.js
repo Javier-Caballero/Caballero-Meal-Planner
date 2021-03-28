@@ -8,10 +8,10 @@ module.exports = (sequelize) => {
       allowNull: false,
       validate: {
         notEmpty: {
-          msg: '"Title" is required'
+          msg: "'Title' is required"
         },
         notNull: {
-          msg: '"Title" is required',
+          msg: "'Title' is required",
         },
       }
     },
