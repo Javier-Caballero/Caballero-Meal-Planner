@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "87142b25-f2b7-4209-863c-cdc05f182ee3",
+		"name": "Caballero-Meal-Planner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Seed Database",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n    \"title\": \"Mexi Bowl\",\r\n    \"time\": \"30min\",\r\n    \"ingredients\": \"rice, beans, peppers, onion, chorizo, avocado, cheese\",\r\n    \"instructions\": \"Cook rice. Cook beans. Pan fry peppers, onions, and chorizo. Serve in a bowl topped with sliced avocado and cheese.\"\r\n    },\r\n    {\r\n        \"title\": \"Broccoli Bowl\",\r\n        \"time\": \"30min\",\r\n        \"ingredients\": \"rice, broccoli, peppers, onion, chicken\",\r\n        \"instructions\": \"Cook rice. Steam broccoli. Pan fry peppers, onions, and chicken. Serve in a bowl with asian mandarin sauce\"\r\n    },\r\n    {\r\n        \"title\": \"Pasta\",\r\n        \"time\": \"20min\",\r\n        \"ingredients\": \"linguine, mushrooms, sausage, sauce, cheese\",\r\n        \"instructions\": \"Cook pasta. Saute mushrooms. Cook sausage and sauce. Serve with bread and topped with grated cheese.\"\r\n    },\r\n    {\r\n        \"title\": \"Burger and Fries\",\r\n        \"time\": \"20min\",\r\n        \"ingredients\": \"buns, burgers, cheese, lettuce, tomato, onion, fries\",\r\n        \"instructions\": \"Cook burgers and fries. Top burger with cheese and veggies.\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/meals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"meals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Meal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Mexi Bowl\",\r\n    \"time\": \"30min\",\r\n    \"ingredients\": \"rice, beans, peppers, onion, chorizo, avocado, cheese\",\r\n    \"instructions\": \"Cook rice. Cook beans. Pan fry peppers, onions, and chorizo. Serve in a bowl topped with sliced avocado and cheese.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/meals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"meals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All  Meals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/meals/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"meals",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Meal By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/meals/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"meals",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Meal",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Mexi Bowl_Update\",\r\n    \"time\": \"30min_Update\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/meals/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"meals",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Meal",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/meals/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"meals",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
